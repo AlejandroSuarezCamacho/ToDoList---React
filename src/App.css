@@ -1,0 +1,245 @@
+body {
+  /* Fondo */
+  background-color: #0D1117;
+  background-size: 100%;
+  /* Tipografía */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Alineación */
+  justify-content: center;
+}
+
+/* ─── Contenedor principal ──────────────────────────────────── */
+#divM {
+  /* Dimensiones */
+  width: 500px;
+  max-width: 600px;
+  /* Espaciado */
+  margin: 2rem auto;
+  padding: 1em;
+  /* Fondo y borde */
+  background-color: rgba(1, 4, 9, 1);
+  border-radius: 10px;
+  /* Alineación */
+  justify-self: center;
+  text-align: center;
+  /* Animación */
+  animation: sombraGirar 2s linear infinite;
+}
+
+/* ─── Animación sonbra contenedor principal──────────────────── */
+@keyframes sombraGirar {
+  0% {
+    box-shadow: 3px 0px 30px 2px rgb(60, 60, 60)
+  }
+
+  /* derecha */
+  25% {
+    box-shadow: 0px 3px 30px 2px rgb(60, 60, 60)
+  }
+
+  /* abajo */
+  50% {
+    box-shadow: -3px 0px 30px 2px rgb(60, 60, 60)
+  }
+
+  /* izquierda */
+  75% {
+    box-shadow: 0px -3px 30px 2px rgb(60, 60, 60)
+  }
+
+  /* arriba */
+  100% {
+    box-shadow: 3px 0px 30px 2px rgb(60, 60, 60)
+  }
+
+  /* derecha */
+}
+
+/* ─── Título ────────────────────────────────────────────────── */
+h2 {
+  /* Tipografía */
+  font-size: 2em;
+  color: white;
+}
+
+/* ─── Subtítulo ────────────────────────────────────────────────── */
+
+h3 {
+  /* Tipografía */
+  color: rgb(121, 134, 143);
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* ─── Formulario ────────────────────────────────────────────── */
+#form {
+  /* Espaciado */
+  margin-bottom: 16px;
+}
+
+input {
+  /* Dimensiones */
+  width: 250px;
+  flex: 1;
+  /* Espaciado */
+  padding: 1em 10px;
+  margin: 0.5em;
+  /* Tipografía */
+  font-size: 18px;
+  color: white;
+  /* Fondo y borde */
+  background-color: rgba(13, 17, 23, 1);
+  border-style: solid;
+  border-color: rgb(121, 134, 143);
+  border-radius: 10px;
+  /* Sombra */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.422);
+  /* Interaccion */
+  transition: 1s ease;
+}
+
+input::placeholder {
+  /* Color */
+  color: rgb(121, 134, 143);
+}
+
+input:hover {
+  border-color: white;
+}
+
+/* ─── Botón añadir ──────────────────────────────────────────── */
+#add {
+  /* Espaciado */
+  padding: 1em 14px;
+  margin: 0.5em;
+  /* Tipografía */
+  font-size: 18px;
+  color: rgba(35, 134, 54, 1);
+  /* Fondo y borde */
+  background-color: rgba(13, 17, 23, 1);
+  border-style: solid;
+  border-color: rgba(35, 134, 54, 1);
+  border-radius: 10px;
+  /* Sombra */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.422);
+  /* Interacción */
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+#add:hover {
+  /* Tipografía */
+  color: white;
+  /* Fondo y borde */
+  background-color: rgba(35, 134, 54, 1);
+  border-style: solid;
+  border-color: rgba(35, 134, 54, 1);
+}
+
+/* ─── Lista ─────────────────────────────────────────────────── */
+ul {
+  /* Dimensiones */
+  width: 20.5em;
+  /* Fondo y borde */
+  background-color: rgba(21, 27, 35, 1);
+  border-radius: 10px;
+  /* Alineación */
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  /* Decoración */
+  list-style: none;
+}
+
+/* ─── Item de la lista ──────────────────────────────────────── */
+li {
+  /* Dimensiones */
+  width: 300px;
+
+  /* Disposición */
+  display: flex;
+  align-items: center;
+}
+
+/* ─── Texto de la tarea ─────────────────────────────────────── */
+.todo-item__text {
+  /* Dimensiones */
+  flex: 1;
+  /* Tipografía */
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  /* Interacción */
+  cursor: pointer;
+}
+
+/* ─── Texto tachado (tarea completada) ──────────────────────── */
+.todo-item__text--done {
+  /* Tipografía */
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* ─── Botón eliminar ────────────────────────────────────────── */
+#delete {
+  /* Espaciado */
+  padding: 0.6em 14px;
+  margin: 0.5em;
+  /* Tipografía */
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 24, 24);
+  /* Fondo y borde */
+  background-color: rgba(33, 40, 48, 1);
+  border: none;
+  border-radius: 10px;
+  /* Sombra */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.422);
+  /* Interacción */
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+#delete:hover {
+  /* Tipografía */
+  color: white;
+  /* Fondo y borde */
+  background-color: rgb(255, 24, 24);
+}
+
+span {
+  /* Alineación */
+  text-align: left;
+  /* Interaccion */
+  transition: 1s ease;
+}
+
+
+span:hover {
+  /* Tipografia */
+  color: #aaa;
+}
+
+/* ─── Mensaje vacío ─────────────────────────────────────────── */
+p {
+  /* Tipografía */
+  font-size: 17px;
+  /* Alineación */
+  text-align: center;
+  /* Espaciado */
+  margin-top: 24px;
+  /* Interaccion */
+  transition: 1s ease;
+}
+
+/*
+Disposición 
+Dimensiones 
+Espaciado 
+Tipografía 
+Fondo y borde 
+Sombra 
+Alineación 
+Interacción
+*/
